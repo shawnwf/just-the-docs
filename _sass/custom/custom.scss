@@ -1,22 +1,33 @@
-// 配套的标题装修：左侧蓝色装饰条
+// 1. 引用块：紫色窄边框 + 极浅紫背景
+blockquote {
+  background-color: #fdfaff;     // 极浅紫色背景
+  border-left: 3px solid #a29bfe; // 窄窄的紫色竖条 (经典色值)
+  border-radius: 4px;            // 微圆角
+  padding: 15px 22px;            // 内部呼吸感
+  margin: 25px 0;
+  
+  p {
+    color: #3d3d3d;              // 柔和的深灰文字
+    line-height: 1.8;
+    margin-bottom: 0;
+  }
+}
+
+// 2. 标题：经典蓝装饰条
 h2 {
   display: flex;
   align-items: center;
-  padding-left: 12px;       // 给装饰条腾出空间
-  position: relative;       // 方便定位装饰条
-  font-size: 1.5rem;        // 根据需要微调字号
-  margin-top: 2em;          // 章节间距
-  margin-bottom: 1em;
-  color: #1a1a1a;           // 深色标题，更有高级感
-
-  // 这里的 &:before 就是那根窄窄的蓝色竖条
+  padding-left: 14px;
+  position: relative;
+  font-weight: 600;
+  
   &:before {
     content: "";
     position: absolute;
     left: 0;
-    width: 4px;             // 竖条宽度
-    height: 1.2em;          // 竖条高度，比文字略高一点点比较灵动
-    background-color: #1f5a94; // 使用跟 blockquote 一样的经典蓝，保持视觉统一
-    border-radius: 2px;     // 微微的圆角
+    width: 4px;                  // 窄竖条
+    height: 1.1em;
+    background-color: #1f5a94;    // 经典蓝色
+    border-radius: 2px;
   }
 }
