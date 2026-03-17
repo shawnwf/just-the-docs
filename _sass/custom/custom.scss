@@ -1,13 +1,22 @@
-// 自动把小说里的 > 引用块变成 MarkdownNice 风格的卡片
-blockquote {
-  background-color: #f8f9fa; // 浅灰背景
-  border-left: 8px solid #6c5ce7; // 紫色边框 (可换成你喜欢的颜色)
-  border-radius: 8px;
-  padding: 18px 25px;
-  margin: 25px 0;
-  p {
-    color: #2d3436;
-    line-height: 1.8; // 增加行间距，适合长文阅读
-    margin-bottom: 0;
+// 配套的标题装修：左侧蓝色装饰条
+h2 {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;       // 给装饰条腾出空间
+  position: relative;       // 方便定位装饰条
+  font-size: 1.5rem;        // 根据需要微调字号
+  margin-top: 2em;          // 章节间距
+  margin-bottom: 1em;
+  color: #1a1a1a;           // 深色标题，更有高级感
+
+  // 这里的 &:before 就是那根窄窄的蓝色竖条
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 4px;             // 竖条宽度
+    height: 1.2em;          // 竖条高度，比文字略高一点点比较灵动
+    background-color: #1f5a94; // 使用跟 blockquote 一样的经典蓝，保持视觉统一
+    border-radius: 2px;     // 微微的圆角
   }
 }
