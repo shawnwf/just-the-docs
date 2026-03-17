@@ -1,1 +1,13 @@
-// custom SCSS (or CSS) goes here
+// 自动把小说里的 > 引用块变成 MarkdownNice 风格的卡片
+blockquote {
+  background-color: #f8f9fa; // 浅灰背景
+  border-left: 8px solid #6c5ce7; // 紫色边框 (可换成你喜欢的颜色)
+  border-radius: 8px;
+  padding: 18px 25px;
+  margin: 25px 0;
+  p {
+    color: #2d3436;
+    line-height: 1.8; // 增加行间距，适合长文阅读
+    margin-bottom: 0;
+  }
+}
